@@ -1,126 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./multi-form.js" defer></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
   <title>Frontend Mentor | Multi-step form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <main class="main-content d-flex">
+    <div class="side-bar">
+      <!-- Sidebar start -->
 
-  <!-- Sidebar start -->
+      Step 1
+      Your info
 
-  Step 1
-  Your info
+      Step 2
+      Select plan
 
-  Step 2
-  Select plan
+      Step 3
+      Add-ons
 
-  Step 3
-  Add-ons
+      Step 4
+      Summary
+      <!-- Sidebar end -->
+    </div>
 
-  Step 4
-  Summary
+    <div class="form-steps">
+      <div class="step-one">
+        <!-- Step 1 start -->
 
-  <!-- Sidebar end -->
+        Personal info
+        Please provide your name, email address, and phone number.
 
-  <!-- Step 1 start -->
+        Name
+        e.g. Stephen King
 
-  Personal info
-  Please provide your name, email address, and phone number.
+        Email Address
+        e.g. stephenking@lorem.com
 
-  Name
-  e.g. Stephen King
+        Phone Number
+        e.g. +1 234 567 890
 
-  Email Address
-  e.g. stephenking@lorem.com
+        Next Step
 
-  Phone Number
-  e.g. +1 234 567 890
+        <!-- Step 1 end -->
+      </div>
 
-  Next Step
+      <div class="step-two">
+        <!-- Step 2 start -->
 
-  <!-- Step 1 end -->
+        Select your plan
+        You have the option of monthly or yearly billing.
 
-  <!-- Step 2 start -->
+        Arcade
+        $9/mo
 
-  Select your plan
-  You have the option of monthly or yearly billing.
+        Advanced
+        $12/mo
 
-  Arcade
-  $9/mo
+        Pro
+        $15/mo
 
-  Advanced
-  $12/mo
+        Monthly
+        Yearly
 
-  Pro
-  $15/mo
+        Go Back
+        Next Step
 
-  Monthly
-  Yearly
+        <!-- Step 2 end -->
+      </div>
 
-  Go Back
-  Next Step
+      <div class="step-three">
+        <!-- Step 3 start -->
 
-  <!-- Step 2 end -->
+        Pick add-ons
+        Add-ons help enhance your gaming experience.
 
-  <!-- Step 3 start -->
+        Online service
+        Access to multiplayer games
+        +$1/mo
 
-  Pick add-ons
-  Add-ons help enhance your gaming experience.
+        Larger storage
+        Extra 1TB of cloud save
+        +$2/mo
 
-  Online service
-  Access to multiplayer games
-  +$1/mo
+        Customizable Profile
+        Custom theme on your profile
+        +$2/mo
 
-  Larger storage
-  Extra 1TB of cloud save
-  +$2/mo
+        Go Back
+        Next Step
 
-  Customizable Profile
-  Custom theme on your profile
-  +$2/mo
+        <!-- Step 3 end -->
+      </div>
 
-  Go Back
-  Next Step
+      <div class="step-four">
+        <!-- Step 4 start -->
 
-  <!-- Step 3 end -->
+        Finishing up
+        Double-check everything looks OK before confirming.
 
-  <!-- Step 4 start -->
+        <!-- Dynamically add subscription and add-on selections here -->
 
-  Finishing up
-  Double-check everything looks OK before confirming.
+        Total (per month/year)
 
-  <!-- Dynamically add subscription and add-on selections here -->
+        Go Back
+        Confirm
 
-  Total (per month/year)
+        <!-- Step 4 end -->
+      </div>
 
-  Go Back
-  Confirm
+      <div class="step-five">
+        <!-- Step 5 start -->
 
-  <!-- Step 4 end -->
+        Thank you!
 
-  <!-- Step 5 start -->
+        Thanks for confirming your subscription! We hope you have fun
+        using our platform. If you ever need support, please feel free
+        to email us at support@loremgaming.com.
 
-  Thank you!
+        <!-- Step 5 end -->
+      </div>
+    </div>
 
-  Thanks for confirming your subscription! We hope you have fun 
-  using our platform. If you ever need support, please feel free 
-  to email us at support@loremgaming.com.
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.linkedin.com/in/janos-berke5/">Berke Janos</a>.
+    </div>
 
-  <!-- Step 5 end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </main>
+
 </body>
+
 </html>
