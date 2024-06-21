@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles.css">
   <script src="./multi-form.js" defer></script>
@@ -68,7 +69,7 @@
 
     <div class="form-wrapper">
       <form id="multi-step-form">
-        <div id="step-one" class="form-step form-step-active">
+        <div id="step-one" class="form-step">
           <h2 class="step-title">
             Personal info
           </h2>
@@ -84,8 +85,7 @@
 
           <div class="mb-3 w-100">
             <label for="email-input" class="form-label">Email <Address></Address></label>
-            <input type="email" class="form-control" id="email-input"
-              placeholder=" e.g. stephenking@lorem.com">
+            <input type="email" class="form-control" id="email-input" placeholder=" e.g. stephenking@lorem.com">
           </div>
 
           <div class="mb-3 w-100">
@@ -96,28 +96,51 @@
           <button type="button" class="btn btn-dark-blue">Next Step</button>
         </div>
 
-        <div id="step-two" class="form-step">
-          <!-- Step 2 start -->
+        <div id="step-two" class="form-step form-step-active">
+          <h2 class="step-title">
+            Select your plan
+          </h2>
+          <h4 class="step-subtitle">
+            You have the option of monthly or yearly billing.
+          </h4>
 
-          Select your plan
-          You have the option of monthly or yearly billing.
+          <div class="plan-options">
+            <input type="radio" class="btn-check" name="plan-options" id="plan-option-arcade" autocomplete="off"
+              checked>
+            <label class="btn btn-outline-secondary" for="plan-option-arcade">
+              <img src="./assets/images/icon-arcade.svg" alt="arcade-icon">
+              <p class="plan-option-name">Arcade</p>
+              <p class="plan-option-price" id="price-arcade">$9/mo</p>
+            </label>
 
-          Arcade
-          $9/mo
+            <input type="radio" class="btn-check" name="plan-options" id="plan-option-advanced" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="plan-option-advanced">
+              <img src="./assets/images/icon-advanced.svg" alt="advance-icon">
+              <p class="plan-option-name">Advanced</p>
+              <p class="plan-option-price" id="price-advanced">$12/mo</p>
+            </label>
 
-          Advanced
-          $12/mo
+            <input type="radio" class="btn-check" name="plan-options" id="plan-option-pro" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="plan-option-pro">
+              
+              <img src="./assets/images/icon-pro.svg" alt="pro-icon">
+              <p class="plan-option-name">Pro</p>
+              <p class="plan-option-price" id="price-advanced">$15/mo</p>
+            </label>
+          </div>
 
-          Pro
-          $15/mo
+          <div class="subscription-type-switch-wrapper">
+            <label class="form-check-label fw-bold" for="subscription-type-switch">Monthly</label>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="subscription-type-switch">
+            </div>
+            <label class="form-check-label" for="subscription-type-switch">Yearly</label>
+          </div>
 
-          Monthly
-          Yearly
-
-          Go Back
-          Next Step
-
-          <!-- Step 2 end -->
+          <div class="step-btn-wrapper">
+            <button type="button" class="btn btn-light">Go Back</button>
+            <button type="button" class="btn btn-dark-blue">Next Step</button>
+          </div>
         </div>
 
         <div id="step-three" class="form-step">
