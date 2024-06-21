@@ -19,19 +19,135 @@
     --White: hsl(0, 0%, 100%);
 }
 
+html, *{box-sizing: border-box;}
+
 body {
-    box-sizing: border-box;
+    height: 98vh;
+    font-family: "Ubuntu";
     font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Magnolia);
 }
 
-.main-content{
-    width: 80%;
-    background-color: aqua;
+.main-content {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--White);
+    box-shadow: 2px 2px 8px var(--LightBlue);
+}
+
+.side-bar {
+    width: 40%;
+    height: 100%;
+    background-image: url(./assets/images/bg-sidebar-desktop.svg);
+    background-size: cover;
+    color: var(--White);
+    padding: 2rem;
+    border-radius: .8rem;
+}
+
+.sb-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.sb-item-number {
+    height: 2rem;
+    width: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 2px solid var(--LightBlue);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2rem;
+    margin-right: 1rem;
+}
+
+.sb-step-number {
+    font-size: .7rem;
+    margin-bottom: 5px;
+    color: var(--PastelBlue);
+    text-transform: uppercase;
+    opacity: 75%;
+}
+
+.sb-step-title {
+    font-size: .9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+}
+
+.form-wrapper {
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#multi-step-form{
+    width: 70%;
+}
+
+.form-step {
+    display: none;
+    flex-direction: column;
+    align-items: start;
+}
+
+.active-sb-step {
+    background-color: var(--LightBlue);
+    color: var(--PurplishBlue);
+}
+
+.form-step-active {
+    display: flex;
+}
+
+.step-title{
+    font-size: 2rem;
+}
+
+.step-subtitle{
+    font-size: .9rem;
+    font-weight: 400;
+    color: var(--CoolGray);
+    margin-bottom: 2rem;
+}
+
+.form-step input{
+    width: 100%;
+}
+
+.form-control::placeholder{
+    color: var(--CoolGray);
+}
+
+.btn-dark-blue{
+    font-size: 1rem;
+    background-color: var(--MarineBlue);
+    color: var(--White);
+    align-self: flex-end;
+    margin-top: 2rem;
 }
 
 .attribution {
     position: fixed;
     bottom: 5px;
-    width: 100%;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
