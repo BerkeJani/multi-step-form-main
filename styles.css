@@ -139,8 +139,14 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
+
+.step-one .form-label{
+    margin-bottom: 5px;
+}
+
+#step-one-button{align-self: flex-end;}
 
 .btn-dark-blue{
     font-size: .9rem;
@@ -148,6 +154,11 @@ body {
     background-color: var(--MarineBlue);
     color: var(--White);
     margin-top: 2rem;
+}
+
+.btn-dark-blue:hover{
+    color: var(--PastelBlue);
+    box-shadow: 3px 3px 3px var(--CoolGray)
 }
 
 .btn-light{
@@ -165,7 +176,6 @@ body {
 }
 
 .btn-outline-secondary{
-    width: 30%;
     margin: solid 2px var(--LightGray);
     padding: 1rem;
     text-align: left;
@@ -209,6 +219,57 @@ margin-bottom: 0;
     margin-left: 7px;
 }
 
+.addon-options-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.addon-option{
+    width: 100%;
+    margin-top: .5rem;
+   
+}
+
+.addon-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.addon-label{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.check input{
+    width: 3rem;
+    height: auto;
+}
+
+.addon-label input{
+    width: 25%;
+}
+
+.addon-title{
+    color: var(--MarineBlue);
+    font-weight:700 ;
+    margin-bottom: 0;
+}
+
+.addon-description{
+color: var(--CoolGray);
+margin-bottom: 0;
+}
+
+.addon-price{
+    color: var(--PurplishBlue);
+}
 
 
 .attribution {

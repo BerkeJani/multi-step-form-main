@@ -68,8 +68,10 @@
     </div>
 
     <div class="form-wrapper">
-      <form id="multi-step-form">
-        <div id="step-one" class="form-step">
+      <form name="multi-step-form" id="multi-step-form">
+
+
+        <div id="step-one" class="form-step form-step-active">
           <h2 class="step-title">
             Personal info
           </h2>
@@ -93,10 +95,11 @@
             <input type="number" class="form-control" id="phone-number-input" aria-describedby="nameHelp"
               placeholder="e.g. +1 234 567 890">
           </div>
-          <button type="button" class="btn btn-dark-blue">Next Step</button>
+          <button type="button" class="btn btn-dark-blue" id="step-one-button" onclick="processStepOne()">Next Step</button>
         </div>
 
-        <div id="step-two" class="form-step form-step-active">
+
+        <div id="step-two" class="form-step">
           <h2 class="step-title">
             Select your plan
           </h2>
@@ -105,7 +108,7 @@
           </h4>
 
           <div class="plan-options">
-            <input type="radio" class="btn-check" name="plan-options" id="plan-option-arcade" autocomplete="off"
+            <input type="radio" class="btn-check" name="plan-options" value="arcade" id="plan-option-arcade" autocomplete="off"
               checked>
             <label class="btn btn-outline-secondary" for="plan-option-arcade">
               <img src="./assets/images/icon-arcade.svg" alt="arcade-icon">
@@ -113,86 +116,125 @@
               <p class="plan-option-price" id="price-arcade">$9/mo</p>
             </label>
 
-            <input type="radio" class="btn-check" name="plan-options" id="plan-option-advanced" autocomplete="off">
+            <input type="radio" class="btn-check" name="plan-options" value="advanced" id="plan-option-advanced" autocomplete="off">
             <label class="btn btn-outline-secondary" for="plan-option-advanced">
               <img src="./assets/images/icon-advanced.svg" alt="advance-icon">
               <p class="plan-option-name">Advanced</p>
               <p class="plan-option-price" id="price-advanced">$12/mo</p>
             </label>
 
-            <input type="radio" class="btn-check" name="plan-options" id="plan-option-pro" autocomplete="off">
+            <input type="radio" class="btn-check" name="plan-options" value="pro" id="plan-option-pro" autocomplete="off">
             <label class="btn btn-outline-secondary" for="plan-option-pro">
-              
+
               <img src="./assets/images/icon-pro.svg" alt="pro-icon">
               <p class="plan-option-name">Pro</p>
-              <p class="plan-option-price" id="price-advanced">$15/mo</p>
+              <p class="plan-option-price" id="price-pro">$15/mo</p>
             </label>
           </div>
 
           <div class="subscription-type-switch-wrapper">
             <label class="form-check-label fw-bold" for="subscription-type-switch">Monthly</label>
             <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="subscription-type-switch">
+              <input class="form-check-input" type="checkbox" role="switch" name="is-yearly" id="subscription-type-switch" onchange="updateDuration()">
             </div>
             <label class="form-check-label" for="subscription-type-switch">Yearly</label>
           </div>
 
           <div class="step-btn-wrapper">
-            <button type="button" class="btn btn-light">Go Back</button>
-            <button type="button" class="btn btn-dark-blue">Next Step</button>
+            <button type="button" class="btn btn-light" onclick="goBackOneStep()">Go Back</button>
+            <button type="button" class="btn btn-dark-blue" onclick="processStepTwo()">Next Step</button>
           </div>
         </div>
 
+
         <div id="step-three" class="form-step">
-          <!-- Step 3 start -->
+          <h2 class="step-title">
+            Pick add-ons
+          </h2>
+          <h4 class="step-subtitle">
+            Add-ons help enhance your gaming experience.
+          </h4>
 
-          Pick add-ons
-          Add-ons help enhance your gaming experience.
+          <div class="addon-options-wrapper">
+            <div class="addon-option">
+              <label class="btn btn-outline-secondary addon-label" for="cb-online-service">
+                <input type="checkbox" class="check" name="addon-onl-serv" id="cb-online-service" autocomplete="off">
+                <div class="addon-item">
+                  <p class="addon-title"> Online service</p>
+                  <p class="addon-description">Access to multiplayer games</p>
+                </div>
+                <div class="addon-price" id="online-service-price">+$1/mo</div>
+              </label>
+            </div>
 
-          Online service
-          Access to multiplayer games
-          +$1/mo
+            <div class="addon-option">
+              <label class="btn btn-outline-secondary addon-label" for="cb-larger-storage">
+                <input type="checkbox" class="check" name="addon-larg-stor" id="cb-larger-storage" autocomplete="off">
+                <div class="addon-item">
+                  <p class="addon-title"> Larger storage</p>
+                  <p class="addon-description">Extra 1TB of cloud save</p>
+                </div>
+                <div class="addon-price" id="larger-storage-price">+$2/mo</div>
+              </label>
+            </div>
 
-          Larger storage
-          Extra 1TB of cloud save
-          +$2/mo
+            <div class="addon-option">
+              <label class="btn btn-outline-secondary addon-label" for="cb-customizable-profile">
+                <input type="checkbox" class="check" name="addon-cust-prof" id="cb-customizable-profile" autocomplete="off">
+                <div class="addon-item">
+                  <p class="addon-title"> Customizable Profile</p>
+                  <p class="addon-description">Custom theme on your profile</p>
+                </div>
+                <div class="addon-price" id="customizable-profile-price">+$2/mo</div>
+              </label>
+            </div>
+          </div>
 
-          Customizable Profile
-          Custom theme on your profile
-          +$2/mo
-
-          Go Back
-          Next Step
-
-          <!-- Step 3 end -->
+          <div class="step-btn-wrapper">
+            <button type="button" class="btn btn-light" onclick="goBackOneStep()">Go Back</button>
+            <button type="button" class="btn btn-dark-blue" onclick="processStepThree()">Next Step</button>
+          </div>
         </div>
 
-        <div id="step-four" class="form-step">
-          <!-- Step 4 start -->
 
-          Finishing up
-          Double-check everything looks OK before confirming.
+        <div id="step-four" class="form-step ">
+          <h2 class="step-title">
+            Finishing up
+          </h2>
+          <h4 class="step-subtitle">
+            Double-check everything looks OK before confirming.
+          </h4>
 
-          <!-- Dynamically add subscription and add-on selections here -->
-
-          Total (per month/year)
-
-          Go Back
-          Confirm
-
-          <!-- Step 4 end -->
+          <div class="summary">
+            <div id="plan-summary">
+              <button class="btn btn-success">Change</button>
+            </div>
+            <hr>
+            <div class="addon-summary"></div>
+          </div>
+          <div class="total-costs">
+            <div id="total-title">
+              Total (per month/year)
+            </div>
+            <div id="total-sum"></div>
+          </div>
+          <div class="step-btn-wrapper">
+            <button type="button" class="btn btn-light" onclick="goBackOneStep()">Go Back</button>
+            <button type="button" class="btn btn-dark-blue" onclick="processStepFour()">Confirm</button>
+          </div>
         </div>
+
 
         <div id="step-five" class="form-step">
-          <!-- Step 5 start -->
-
-          Thank you!
-
-          Thanks for confirming your subscription! We hope you have fun
-          using our platform. If you ever need support, please feel free
-          to email us at support@loremgaming.com.
-
-          <!-- Step 5 end -->
+          <img src="./assets/images/icon-thank-you.svg" alt="thankyou-icon" class="mx-auto">
+          <h2 class="step-title text-center mt-4 w-100">
+            Thank you!
+          </h2>
+          <h4 class="step-subtitle text-center mt-3">
+            Thanks for confirming your subscription! We hope you have fun
+            using our platform. If you ever need support, please feel free
+            to email us at support@loremgaming.com.
+          </h4>
         </div>
       </form>
     </div>
